@@ -17,8 +17,8 @@
         }
     ],
     "require": {
-        "php": "^8.3",
-        "laravel/framework": "^13.0",
+        "php": "^8.2",
+        "laravel/framework": "^12.8|^13.0",
         "inertiajs/inertia-laravel": "^3.0"
     },
     "autoload": {
@@ -55,9 +55,9 @@
         ]
     },
     "require-dev": {
-        "laravel/pint": "^1.32",
-        "orchestra/testbench": "^11.3",
-        "phpunit/phpunit": "^13.3"
+        "laravel/pint": "^1.30",
+        "orchestra/testbench": "^10.0|^11.0",
+        "phpunit/phpunit": "^11.5|^12.5|^13.3"
     },
     "scripts": {
         "lint": "pint",
