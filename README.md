@@ -26,11 +26,3 @@ Lodestone is in alpha, so expect breaking changes before 1.0. It needs PHP 8.2+,
 composer require lodestone/lodestone:^0.1@alpha
 php artisan lodestone:install
 ```
-
-The install command adds an `AdminPanelProvider`, an example `UsersPage`, and the panel's frontend entry, then adds the React plugin to your Vite config and installs and builds the Node dependencies. Sign in, then visit `/admin`.
-
-The panel uses the `auth` middleware, so your app needs a `login` route. A Laravel starter kit or Fortify gives you one, or change the middleware in `AdminPanelProvider`.
-
-## Development
-
-TODO
