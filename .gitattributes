@@ -1,0 +1,11 @@
+# Kept out of Composer dist archives: repo tooling isn't part of the package.
+/.editorconfig export-ignore
+/.gitattributes export-ignore
+/.github export-ignore
+/docs export-ignore
+/.prettierrc export-ignore
+/CLAUDE.md export-ignore
+/package.json export-ignore
+/package-lock.json export-ignore
+/phpunit.xml export-ignore
+/tests export-ignore

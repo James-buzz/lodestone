@@ -1,0 +1,243 @@
+/*
+ * Import after tailwindcss in your panel stylesheet:
+ *   @import 'tailwindcss';
+ *   @import '@lodestone/react/styles.css';
+ * Then override any token below to theme the panel (any shadcn/tweakcn theme works).
+ */
+@import 'tw-animate-css';
+@import '@fontsource-variable/geist';
+@import '@fontsource-variable/geist-mono';
+
+@source './';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'Geist Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+}
+
+/* Lodestone theme: zinc neutrals with a deep blue primary */
+:root {
+    --radius: 0.625rem;
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.141 0.005 285.823);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.141 0.005 285.823);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.141 0.005 285.823);
+    --primary: oklch(0.52 0.105 223.128);
+    --primary-foreground: oklch(0.984 0.019 200.873);
+    --secondary: oklch(0.967 0.001 286.375);
+    --secondary-foreground: oklch(0.21 0.006 285.885);
+    --muted: oklch(0.967 0.001 286.375);
+    --muted-foreground: oklch(0.552 0.016 285.938);
+    --accent: oklch(0.967 0.001 286.375);
+    --accent-foreground: oklch(0.21 0.006 285.885);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.92 0.004 286.32);
+    --input: oklch(0.92 0.004 286.32);
+    --ring: oklch(0.705 0.015 286.067);
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.141 0.005 285.823);
+    --sidebar-primary: oklch(0.609 0.126 221.723);
+    --sidebar-primary-foreground: oklch(0.984 0.019 200.873);
+    --sidebar-accent: oklch(0.967 0.001 286.375);
+    --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
+    --sidebar-border: oklch(0.92 0.004 286.32);
+    --sidebar-ring: oklch(0.705 0.015 286.067);
+    /* Categorical chart palette for series without a tone, in fixed order.
+       Validated for colour-blind separation in both themes; light slots 3-5 sit under 3:1
+       on white, so charts always show a legend and tooltip. */
+    --chart-1: #2a78d6;
+    --chart-2: #eb6834;
+    --chart-3: #1baf7a;
+    --chart-4: #eda100;
+    --chart-5: #e87ba4;
+    /* Status tones: badges, sparklines and toned chart series. Kept distinct from the chart palette. */
+    --tone-success: #0ca30c;
+    --tone-danger: #d03b3b;
+    --tone-warning: #fab219;
+    --tone-info: #0ea5e9;
+    --tone-gray: #a1a1aa;
+}
+
+.dark {
+    --background: oklch(0.141 0.005 285.823);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.21 0.006 285.885);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.21 0.006 285.885);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.45 0.085 224.283);
+    --primary-foreground: oklch(0.984 0.019 200.873);
+    --secondary: oklch(0.274 0.006 286.033);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.274 0.006 286.033);
+    --muted-foreground: oklch(0.705 0.015 286.067);
+    --accent: oklch(0.274 0.006 286.033);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.552 0.016 285.938);
+    --sidebar: oklch(0.21 0.006 285.885);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.715 0.143 215.221);
+    --sidebar-primary-foreground: oklch(0.302 0.056 229.695);
+    --sidebar-accent: oklch(0.274 0.006 286.033);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.552 0.016 285.938);
+    --chart-1: #3987e5;
+    --chart-2: #d95926;
+    --chart-3: #199e70;
+    --chart-4: #c98500;
+    --chart-5: #d55181;
+    --tone-gray: #71717a;
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-background text-foreground font-sans;
+    }
+}
+
+/* Server-rendered Markdown from the Markdown node. */
+@layer components {
+    .lodestone-prose {
+        font-size: var(--text-sm);
+        line-height: 1.65;
+        overflow-wrap: anywhere;
+    }
+    .lodestone-prose > * + * {
+        margin-top: 0.75em;
+    }
+    .lodestone-prose :where(h1, h2, h3, h4) {
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        line-height: 1.3;
+    }
+    .lodestone-prose > :where(h1, h2, h3, h4):not(:first-child) {
+        margin-top: 1.4em;
+    }
+    .lodestone-prose :where(h1) {
+        font-size: 1.25rem;
+    }
+    .lodestone-prose :where(h2) {
+        font-size: 1.075rem;
+    }
+    .lodestone-prose :where(h3, h4) {
+        font-size: 1em;
+    }
+    .lodestone-prose :where(ul) {
+        list-style: disc;
+        padding-left: 1.25rem;
+    }
+    .lodestone-prose :where(ol) {
+        list-style: decimal;
+        padding-left: 1.25rem;
+    }
+    .lodestone-prose :where(li + li) {
+        margin-top: 0.25em;
+    }
+    .lodestone-prose :where(li)::marker {
+        color: var(--muted-foreground);
+    }
+    .lodestone-prose :where(strong) {
+        font-weight: 600;
+    }
+    .lodestone-prose :where(a) {
+        font-weight: 500;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        text-decoration-color: color-mix(in oklab, currentColor 30%, transparent);
+    }
+    .lodestone-prose :where(a:hover) {
+        text-decoration-color: currentColor;
+    }
+    .lodestone-prose :where(code) {
+        font-family: var(--font-mono);
+        font-size: 0.85em;
+        background: var(--muted);
+        padding: 0.1em 0.35em;
+        border-radius: 0.3rem;
+    }
+    .lodestone-prose :where(pre) {
+        background: var(--muted);
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        font-size: 0.8rem;
+        line-height: 1.55;
+    }
+    .lodestone-prose :where(pre code) {
+        background: none;
+        padding: 0;
+        font-size: inherit;
+    }
+    .lodestone-prose :where(blockquote) {
+        border-left: 2px solid var(--border);
+        padding-left: 0.75rem;
+        color: var(--muted-foreground);
+    }
+    .lodestone-prose :where(hr) {
+        border-color: var(--border);
+    }
+    .lodestone-prose :where(table) {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.925em;
+    }
+    .lodestone-prose :where(th, td) {
+        border-bottom: 1px solid var(--border);
+        padding: 0.4rem 0.5rem;
+        text-align: left;
+    }
+    .lodestone-prose :where(th) {
+        font-weight: 500;
+        color: var(--muted-foreground);
+    }
+    .lodestone-prose :where(img) {
+        max-width: 100%;
+        border-radius: 0.5rem;
+    }
+}
